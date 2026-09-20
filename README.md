@@ -1,184 +1,139 @@
-# Awesome-Hyperparameter-Optimization-Platform
+<p align="center">
+  <img src="assets/banner.svg" alt="Awesome Hyperparameter Optimization Platform Banner" width="100%">
+</p>
 
-Top Hyperparameter Optimization Tools Ecosystem
+# 🚀 Awesome Hyperparameter Optimization Platform & Tools Ecosystem
 
-Curated List of SaaS Products & Open-Source GitHub Projects
-Focused on Bayesian Optimization, Hyperparameter Tuning, Neural Architecture Search & AutoML
-Last updated: September 2026
+<p align="left">
+  <a href="https://github.com/ishandutta2007/Awesome-Awesome-Awesome"><img src="https://img.shields.io/badge/Awesome-%E2%9C%94-blueviolet?style=flat-square&logo=github" alt="Awesome"/></a><a href="https://discord.gg/jc4xtF58Ve"><img src="https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Discord" /></a>
+  <a href="https://github.com/ishandutta2007/Awesome-Awesome-Awesome"><img src="https://awesome.re/badge.svg" alt="Awesome List"></a>
+  <a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="License: MIT"></a>
+  <a href="https://github.com/ishandutta2007"><img alt="GitHub followers" src="https://img.shields.io/github/followers/ishandutta2007?label=Follow" /></a>
+</p>
 
-This repository tracks notable SaaS platforms and open-source projects for Hyperparameter Optimization (HPO). These tools help machine learning engineers and data scientists automate the search for optimal hyperparameters, reducing manual experimentation and improving model performance across training pipelines.
+> **The definitive curated directory of Hyperparameter Optimization (HPO) 🎛️, AutoML 🤖, Bayesian Optimization 🎯, and Neural Architecture Search (NAS) 🧠 SaaS platforms & open-source frameworks.**
 
-Examples include SigOpt, Weights & Biases Sweeps, Optuna Hub, Katib, Determined AI, ClearML HPO, Comet Optimizer, Amazon SageMaker HPO, Vertex Vizier, and Ray Tune (the category leaders).
+---
 
-Open-source emphasis: This section is heavily expanded with every major active project for self-hosting, custom tuning algorithms, and transparent experimentation — ideal for ML engineers, researchers, and teams building AutoML pipelines without vendor lock-in.
+## 📌 Table of Contents
+- [📊 Market Landscape & Overview](#-market-landscape--overview)
+- [☁️ SaaS & Managed HPO Platforms](#️-saas--managed-hpo-platforms)
+- [🔓 Open-Source HPO & AutoML Libraries](#-open-source-hpo--automl-libraries)
+- [🛠️ Architecture & Building Blocks](#️-architecture--building-blocks)
+- [🤝 Contributing](#-contributing)
+- [❤️ Support & Sponsorship](#️-support--sponsorship)
+- [📈 Star History](#-star-history)
+- [📜 Disclaimer](#-disclaimer)
 
-Contributions welcome! Open a PR to add/update entries. Keep descriptions factual and link to official sites.
+---
 
-Table of Contents
+## 📊 Market Landscape & Overview 📈
 
-SaaS/Hosted Platforms
+The global **Hyperparameter Optimization (HPO) and AutoML market** is estimated at **$1.2 Billion to $1.5 Billion (2026)** and is projected to expand rapidly alongside enterprise adoption of generative AI, deep learning, and custom model fine-tuning. 🚀
 
-Open-Source GitHub Projects
+### 🔍 Market Fragmentation Analysis
+The HPO sector exhibits **moderate fragmentation with multi-cloud and MLOps consolidation**:
+- ☁️ **Public Cloud Leaders (AWS, Google Cloud):** Offer managed HPO services bundled directly into broader ML suites (SageMaker, Vertex AI).
+- 🛠️ **MLOps & Experiment Tracking Platforms (Weights & Biases, Comet, ClearML):** Provide integrated HPO suites to streamline trial tracking, visualization, and hyperparameter tuning in one ecosystem.
+- 🔓 **Open-Source Dominance:** Core algorithm development is dominated by community-driven frameworks (Ray Tune, Optuna, Ax/BoTorch, NNI), while specialized enterprise solutions (SigOpt/Intel, Determined AI/HPE) have been acquired to power hardware-accelerated deep learning stacks.
 
-How to Contribute
+---
 
-Disclaimer
+## ☁️ SaaS & Managed HPO Platforms 🌐
 
-SaaS/Hosted Platforms
+Below is a comparison of leading SaaS and enterprise-managed hyperparameter optimization platforms, ordered by company size (valuation / revenue / parent enterprise size, descending). 🏢
 
-SigOpt
-Enterprise Bayesian optimization platform for hyperparameter tuning and experiment design. Acquired by Intel in 2020 and integrated into Intel's AI software portfolio.
+| Platform 🏷️ | Starting Tier Price 💰 | Free Tier / Trial Limits 🎁 | Parent / Company Size 📊 | Description & Key Features 📝 |
+| :--- | :--- | :--- | :--- | :--- |
+| **[Amazon SageMaker HPO](https://aws.amazon.com/sagemaker/)** | \$0.05 per vCPU-hour / \$0.26 per GPU-hour (pay-as-you-go compute) | **2 months free trial** via AWS Free Tier (250 hours/month ml.m5.xlarge or ml.t3.medium) | **\$2.4 Trillion** market cap (Amazon) | Enterprise cloud-native tuning supporting Bayesian, Hyperband, and random search with automated early stopping. |
+| **[Google Cloud Vertex Vizier](https://cloud.google.com/vertex-ai)** | \$0.045 per vCPU-hour / \$0.35 per GPU-hour + Vizier service fee | **\$300 free credits** for new Google Cloud users (valid for 90 days across Vertex AI services) | **\$2.1 Trillion** market cap (Alphabet) | Black-box Bayesian optimization service based on Google Vizier, supporting multi-objective tuning and transfer learning. |
+| **[Determined AI](https://www.determined.ai/)** (HPE) | \$1.20 per node-hour (HPE Machine Learning Development Environment) | **30-day free trial** or self-hosted open-source core with unlimited local compute | **\$25 Billion** market cap (Hewlett Packard Enterprise) | Deep learning platform featuring built-in distributed HPO using Adaptive Hyperband (ASHA) and resource management. |
+| **[SigOpt](https://sigopt.com/)** (Intel) | \$15,000 / year (Enterprise Tier) | **30-day enterprise trial** available upon sales request; open-source SigOpt API client | **\$90 Billion** market cap (Intel Corporation) | Enterprise Bayesian optimization platform for complex simulation, deep learning, and multi-objective experiment design. |
+| **[Weights & Biases Sweeps](https://wandb.ai/site/sweeps)** | \$50 per user/month (Team Tier) | **Free Forever Personal Tier** (1 user, 100 GB storage, unlimited Sweeps & HPO runs) | **\$1.2 Billion** valuation (Series C funding) | Developer-favorite experiment tracking platform with built-in Hyperparameter Sweeps (Bayesian, Grid, Random) and dynamic visualization. |
+| **[ClearML HPO](https://clear.ml/)** | \$15 per user/month (Pro Tier) | **Free Forever Community Tier** (Up to 3 users, 100 GB storage, full HPO pipeline access) | **\$150 Million** estimated valuation | Open-source & cloud MLOps platform supporting Optuna, BOHB, and RandomSearch with automated execution orchestration. |
+| **[Comet Optimizer](https://www.comet.com/)** | \$179 per month (Team Tier) | **Free Forever Individual Tier** (1 user, 1 concurrent job, 500 hours tracking/year) | **\$100 Million** estimated valuation | Full MLOps & experiment management system with Comet Optimizer for multi-parameter grid/random/Bayesian optimization. |
+| **[Optuna Hub](https://hub.optuna.org/)** | \$0 / month (Community Hosted Hub) | **100% Free & Open Community Service** (Unlimited module discovery & sharing) | **Community / Preferred Networks** (~ \$2 Billion valuation) | Central registry for discovering, sharing, and evaluating custom Optuna algorithms, samplers, and visualization tools. |
 
-Weights & Biases Sweeps
-Hyperparameter optimization integrated into the W&B experiment tracking platform. Supports grid, random, and Bayesian search with visualization dashboards.
+---
 
-Optuna Hub
-Community hub for sharing and discovering Optuna-based optimization algorithms, visualization tools, and integration modules. Built around the open-source Optuna framework.
+## 🔓 Open-Source HPO & AutoML Libraries ⚡
 
-Katib
-Kubernetes-native hyperparameter tuning and neural architecture search system, part of the Kubeflow ecosystem. Manages Experiments, Suggestions, and Trials as Kubernetes Custom Resources -
-3
-.
+The table below lists top open-source repositories for hyperparameter tuning, neural architecture search, and Bayesian optimization, sorted by **GitHub Star Count** (descending). ⭐
 
-Determined AI
-All-in-one deep learning platform with built-in hyperparameter tuning, distributed training, and resource management. Now part of Hewlett Packard Enterprise -
-5
-.
+| Repository 📦 | GitHub Stars 🌟 | License 📄 | Primary Search Algorithms & Features 💡 |
+| :--- | :---: | :---: | :--- |
+| **[Ray Tune](https://github.com/ray-project/ray)** | [![Ray Tune Stars](https://img.shields.io/github/stars/ray-project/ray?style=social&color=white)](https://github.com/ray-project/ray/stargazers) | Apache 2.0 | Scalable distributed hyperparameter tuning engine. Supports ASHA, Hyperband, BOHB, PBT, and Bayesian search across PyTorch, TensorFlow, and XGBoost. |
+| **[Optuna](https://github.com/optuna/optuna)** | [![Optuna Stars](https://img.shields.io/github/stars/optuna/optuna?style=social&color=white)](https://github.com/optuna/optuna/stargazers) | MIT | Imperative define-by-run HPO framework featuring TPE, CMA-ES, hyperband pruning, multi-objective optimization, and distributed worker execution. |
+| **[NNI (Neural Network Intelligence)](https://github.com/microsoft/nni)** | [![NNI Stars](https://img.shields.io/github/stars/microsoft/nni?style=social&color=white)](https://github.com/microsoft/nni/stargazers) | MIT | Microsoft's AutoML toolkit for hyperparameter tuning, Neural Architecture Search (NAS), and model compression across local, Kubernetes, and cloud environments. |
+| **[AutoGluon](https://github.com/autogluon/autogluon)** | [![AutoGluon Stars](https://img.shields.io/github/stars/autogluon/autogluon?style=social&color=white)](https://github.com/autogluon/autogluon/stargazers) | Apache 2.0 | AWS AutoML toolkit automating HPO, ensembling, and deep learning model architecture search for tabular, text, image, and time-series data. |
+| **[Hyperopt](https://github.com/hyperopt/hyperopt)** | [![Hyperopt Stars](https://img.shields.io/github/stars/hyperopt/hyperopt?style=social&color=white)](https://github.com/hyperopt/hyperopt/stargazers) | BSD-3-Clause | Asynchronous distributed hyperparameter optimization library implementing Tree-structured Parzen Estimator (TPE) and Random Search over complex search spaces. |
+| **[ClearML](https://github.com/allegroai/clearml)** | [![ClearML Stars](https://img.shields.io/github/stars/allegroai/clearml?style=social&color=white)](https://github.com/allegroai/clearml/stargazers) | Apache 2.0 | Open-source MLOps suite with built-in HPO engine, experiment tracking, and agent orchestration for distributed search task execution. |
+| **[Ludwig](https://github.com/uber/ludwig)** | [![Ludwig Stars](https://img.shields.io/github/stars/uber/ludwig?style=social&color=white)](https://github.com/uber/ludwig/stargazers) | Apache 2.0 | Declarative deep learning framework by Uber/Predibase with native hyperparameter tuning integrated via Ray Tune. |
+| **[BayesianOptimization](https://github.com/bayesian-optimization/BayesianOptimization)** | [![BayesianOptimization Stars](https://img.shields.io/github/stars/bayesian-optimization/BayesianOptimization?style=social&color=white)](https://github.com/bayesian-optimization/BayesianOptimization/stargazers) | MIT | Lightweight, pure Python implementation of global optimization with Gaussian processes and acquisition function maximization. |
+| **[BoTorch](https://github.com/pytorch/botorch)** | [![BoTorch Stars](https://img.shields.io/github/stars/pytorch/botorch?style=social&color=white)](https://github.com/pytorch/botorch/stargazers) | MIT | PyTorch-based modular Bayesian optimization framework using Monte Carlo acquisition functions and Gaussian Process regression. |
+| **[Determined](https://github.com/determined-ai/determined)** | [![Determined Stars](https://img.shields.io/github/stars/determined-ai/determined?style=social&color=white)](https://github.com/determined-ai/determined/stargazers) | Apache 2.0 | Open-source deep learning platform with native state-of-the-art hyperparameter tuning (Adaptive ASHA), GPU scheduling, and smart checkpointing. |
+| **[Ax (Adaptive Experimentation)](https://github.com/facebook/Ax)** | [![Ax Stars](https://img.shields.io/github/stars/facebook/Ax?style=social&color=white)](https://github.com/facebook/Ax/stargazers) | MIT | Meta's adaptive experimentation platform built on BoTorch for multi-objective optimization, sequential A/B testing, and HPO. |
+| **[Katib](https://github.com/kubeflow/katib)** | [![Katib Stars](https://img.shields.io/github/stars/kubeflow/katib?style=social&color=white)](https://github.com/kubeflow/katib/stargazers) | Apache 2.0 | Kubernetes-native HPO and Neural Architecture Search (NAS) controller for Kubeflow supporting Random, Grid, Bayesian, CMA-ES, and ENAS. |
+| **[SMAC3](https://github.com/automl/SMAC3)** | [![SMAC3 Stars](https://img.shields.io/github/stars/automl/SMAC3?style=social&color=white)](https://github.com/automl/SMAC3/stargazers) | BSD-3-Clause | Sequential Model-based Algorithm Configuration in Python for evaluating continuous, categorical, and conditional hyperparameter spaces. |
+| **[Dragonfly](https://github.com/dragonfly/dragonfly)** | [![Dragonfly Stars](https://img.shields.io/github/stars/dragonfly/dragonfly?style=social&color=white)](https://github.com/dragonfly/dragonfly/stargazers) | MIT | Scalable Bayesian optimization library supporting multi-fidelity, multi-objective, and high-dimensional parameter spaces. |
+| **[GPyOpt](https://github.com/SheffieldML/GPyOpt)** | [![GPyOpt Stars](https://img.shields.io/github/stars/SheffieldML/GPyOpt?style=social&color=white)](https://github.com/SheffieldML/GPyOpt/stargazers) | BSD-3-Clause | Python framework for domain-agnostic Bayesian optimization based on Gaussian processes from the Sheffield Machine Learning group. |
+| **[HEBO](https://github.com/huawei-noah/HEBO)** | [![HEBO Stars](https://img.shields.io/github/stars/huawei-noah/HEBO?style=social&color=white)](https://github.com/huawei-noah/HEBO/stargazers) | MIT | Heteroscedastic Evolutionary Bayesian Optimization from Huawei Noah's Ark Lab, winner of the NeurIPS 2020 Black-Box Optimization Challenge. |
+| **[OptunaHub](https://github.com/optuna/optunahub)** | [![OptunaHub Stars](https://img.shields.io/github/stars/optuna/optunahub?style=social&color=white)](https://github.com/optuna/optunahub/stargazers) | MIT | Official registry of packages and extensions for Optuna, enabling community algorithm sharing and modular HPO pipelines. |
+| **[mlr3mbo](https://github.com/mlr-org/mlr3mbo)** | [![mlr3mbo Stars](https://img.shields.io/github/stars/mlr-org/mlr3mbo?style=social&color=white)](https://github.com/mlr-org/mlr3mbo/stargazers) | LGPL-3.0 | R ecosystem package for flexible model-based optimization, Bayesian tuning, and multi-objective algorithm configuration. |
 
-ClearML HPO
-Open-source MLOps platform with hyperparameter optimization supporting Optuna, BOHB, RandomSearch, and GridSearch strategies. Provides Web UI for managing optimization tasks -
-6
--
-20
-.
+---
 
-Comet Optimizer
-Experiment management platform with hyperparameter optimization capabilities. Tracks, visualizes, and compares tuning experiments alongside model metrics.
+## 🛠️ Architecture & Building Blocks 🏗️
 
-Amazon SageMaker HPO
-Fully managed hyperparameter tuning service within AWS SageMaker. Supports Bayesian, random, and Hyperband strategies with automatic early stopping.
+When constructing custom enterprise HPO and AutoML pipelines, engineers often combine tools across layers:
 
-Vertex Vizier
-Google Cloud's hyperparameter tuning service based on the Vizier algorithm. Supports multi-objective optimization and early stopping for Vertex AI training jobs.
+```mermaid
+flowchart TD
+    A["Search Engine (Ray Tune / Optuna / Ax)"] --> B["Cluster Orchestration (Kubeflow Katib / Ray / Kubernetes)"]
+    B --> C["Experiment Tracking (Weights & Biases / MLflow / ClearML)"]
+    C --> D["Storage & Metadata (PostgreSQL / Redis / S3)"]
+```
 
-Ray Tune
-Distributed hyperparameter tuning library from the Ray ecosystem. Supports multiple search algorithms including ASHA, Hyperband, BOHB, and Bayesian optimization -
-16
-.
+- ⚙️ **Tuning Engines:** Optuna, Ray Tune, BoTorch, SMAC3.
+- ☸️ **Orchestration Controllers:** Katib (Kubernetes CRDs), Determined AI, Ray Cluster Manager.
+- 📊 **Experiment Tracking:** Weights & Biases, MLflow, Comet, ClearML.
+- 🔌 **Integrations:** PyTorch Lightning, XGBoost, LightGBM, scikit-learn.
 
-Open-Source GitHub Projects
+---
 
-Optuna
-A hyperparameter optimization framework designed for machine learning. Features define-by-run API, TPE/CMA-ES samplers, pruning algorithms, and distributed optimization. One of the most widely adopted HPO libraries. License: MIT.
+## 🤝 Contributing 📝
 
-Ray Tune
-Distributed hyperparameter tuning at scale. Part of the Ray ecosystem with support for ASHA, Hyperband, BOHB, PBT, and Bayesian optimization. Integrates with PyTorch, TensorFlow, and XGBoost. License: Apache 2.0 -
-16
-.
+Contributions are welcome! Please follow these steps to add or update entry data:
 
-NNI (Neural Network Intelligence)
-Microsoft's open-source AutoML toolkit for hyperparameter tuning, neural architecture search, and model compression. Built-in tuners include TPE, SMAC, BOHB, and GP. Supports local, remote, Kubernetes, and cloud training platforms -
-4
--
-11
-.
+1. 🍴 Fork the repository.
+2. ✏️ Edit `README.md` keeping the Markdown tabular formatting consistent.
+3. 🔍 Ensure links, licensing, star badge syntax, and pricing details are verified.
+4. 🚀 Submit a Pull Request with a short summary of changes.
 
-Katib
-Kubernetes-native hyperparameter tuning and NAS system. Defines Experiments as CRDs with search spaces, algorithms, and objectives. Supports multiple metrics collection strategies -
-3
-.
+---
 
-Determined
-All-in-one deep learning platform with integrated hyperparameter tuning. Supports adaptive_asha, random, and grid search strategies. Deploys locally or on AWS/GCP with YAML configuration -
-5
--
-12
-.
+## ❤️ Support & Sponsorship ☕
 
-ClearML
-Open-source MLOps platform with HPO module. Supports Optuna, BOHB, RandomSearch, and GridSearch. Provides Web UI for monitoring optimization experiments -
-6
--
-20
-.
+Thank you for exploring and utilizing the **Awesome Hyperparameter Optimization Platform** ecosystem guide! 🌟
 
-Ax (Adaptive Experimentation)
-Facebook's platform for adaptive experimentation and Bayesian optimization. Built on BoTorch with support for multi-objective optimization and batch acquisition functions. License: MIT.
+If you find this resource helpful for your machine learning engineering workflows, research, or enterprise infrastructure design, please consider supporting the project:
 
-BoTorch
-Bayesian optimization library built on PyTorch. Provides modular components for building custom acquisition functions and optimization loops. Foundation for Ax and other HPO tools. License: MIT.
+- ⭐ **Star this repository** to help others discover it on GitHub.
+- 🔀 **Fork and share** it with your fellow ML engineers, data scientists, and MLOps teams.
+- ☕ **Buy me a coffee / Sponsor the project:** Your contributions directly fund continuous updates and open-source tooling maintenance. Visit the [GitHub Sponsor Dashboard](https://github.com/sponsors/ishandutta2007) to become a sponsor!
 
-SMAC3
-Sequential Model-based Algorithm Configuration. A versatile Bayesian optimization package for hyperparameter optimization with support for categorical and continuous parameters -
-8
-.
+---
 
-Hyperopt
-Distributed asynchronous hyperparameter optimization library. Features Tree-structured Parzen Estimator (TPE) and random search algorithms. Widely used in academic and industrial ML pipelines.
+## 📈 Star History
 
-GPyOpt
-Gaussian process optimization library from the Sheffield ML group. Provides Bayesian optimization with support for batch suggestions and constrained optimization -
-8
-.
+[![Star History Chart](https://star-history.dera.page/svg?repos=ishandutta2007/Awesome-Hyperparameter-Optimization-Platform&type=date&legend=top-left)](https://star-history.dera.page/#ishandutta2007/Awesome-Hyperparameter-Optimization-Platform&type=date&legend=top-left)
 
-Spearmint
-Bayesian optimization codebase from Harvard's HIPS lab. Implements algorithms from "Practical Bayesian Optimization of Machine Learning Algorithms" -
-8
-.
+---
 
-mlr3mbo
-R toolbox for Bayesian optimization and model-based optimization. Provides building blocks for custom algorithms with support for single- and multi-objective optimization and mixed search spaces -
-1
--
-15
-.
+## 📜 Disclaimer ⚠️
 
-HEBO
-Heteroscedastic Evolutionary Bayesian Optimization from Huawei Noah's Ark Lab. Designed for high-dimensional and conditional search spaces.
+This directory is community-curated for informational purposes. Hyperparameter optimization jobs consume substantial compute; monitor GPU/CPU cloud costs closely.
 
-Dragonfly
-Scalable Bayesian optimization library with support for multi-fidelity and multi-objective optimization. Includes tree-based ensemble methods -
-9
-.
+---
 
-Hyperband
-Reference implementation of the Hyperband algorithm for hyperparameter optimization. Provides early-stopping bandit-based approach to resource allocation -
-8
-.
-
-Additional Strong Open-Source Options
-
-Algorithm-Specific Libraries: CMA-ES (Python implementation of Covariance Matrix Adaptation), BayesianOptimization (pure Python BO with scipy.optimize interface), RoBO (Robust Bayesian Optimization framework) -
-8
-.
-
-Kubernetes-Native: Katib for Kubeflow users, Kubernetes Jobs with custom HPO controllers.
-
-Framework Integrations: Optuna integrations for PyTorch Lightning, scikit-learn, XGBoost, and LightGBM.
-
-Visualization & Tracking: Optuna Dashboard, Weights & Biases (self-hosted), TensorBoard HParams plugin.
-
-Frameworks for building custom systems: Combine Optuna or Ray Tune for the tuning engine, Katib for Kubernetes orchestration, Determined for full experiment management, and PostgreSQL + Redis for persistence. Add MLflow or Weights & Biases for tracking and visualization.
-
-How to Contribute
-
-Fork the repo.
-
-Add/edit entries in README.md (follow existing format).
-
-Include: name, link, 1–2 sentence description, and whether it's SaaS or open-source.
-
-Submit PR with a short explanation.
-
-Star the repo if you find it useful!
-
-Disclaimer
-
-This is a community-curated list — not exhaustive and not an endorsement.
-
-Hyperparameter optimization tools consume significant compute resources; monitor costs and resource utilization carefully.
-
-Self-hosted open-source solutions require proper cluster management, storage, and security configuration.
-
-Made for ML engineers, data scientists, AutoML researchers, and MLOps practitioners.
-Let's make hyperparameter optimization more open, reproducible, and scalable.
+*Maintained with ❤️ by the Open AutoML & MLOps Community.*
