@@ -58,9 +58,9 @@ Below is a comparison of leading SaaS and enterprise-managed hyperparameter opti
 
 ## 🔓 Open-Source HPO & AutoML Libraries ⚡
 
-The table below lists top open-source repositories for hyperparameter tuning, neural architecture search, and Bayesian optimization, sorted by **GitHub Star Count** (descending). ⭐
+The table below lists top open-source repositories for hyperparameter tuning, neural architecture search, and Bayesian optimization, sorted by **GitHub Stars_Count** (descending). ⭐
 
-| Repository 📦 | GitHub Stars 🌟 | License 📄 | Primary Search Algorithms & Features 💡 |
+| Repository 📦 | GitHub_Stars 🌟 | License 📄 | Primary Search Algorithms & Features 💡 |
 | :--- | :---: | :---: | :--- |
 | **[Ray Tune](https://github.com/ray-project/ray)** | [![Ray Tune Stars](https://img.shields.io/github/stars/ray-project/ray?style=social&color=white)](https://github.com/ray-project/ray/stargazers) | Apache 2.0 | Scalable distributed hyperparameter tuning engine. Supports ASHA, Hyperband, BOHB, PBT, and Bayesian search across PyTorch, TensorFlow, and XGBoost. |
 | **[Optuna](https://github.com/optuna/optuna)** | [![Optuna Stars](https://img.shields.io/github/stars/optuna/optuna?style=social&color=white)](https://github.com/optuna/optuna/stargazers) | MIT | Imperative define-by-run HPO framework featuring TPE, CMA-ES, hyperband pruning, multi-objective optimization, and distributed worker execution. |
@@ -107,7 +107,7 @@ Contributions are welcome! Please follow these steps to add or update entry data
 
 1. 🍴 Fork the repository.
 2. ✏️ Edit `README.md` keeping the Markdown tabular formatting consistent.
-3. 🔍 Ensure links, licensing, star badge syntax, and pricing details are verified.
+3. 🔍 Ensure links, licensing, Stars_Badge syntax, and pricing details are verified.
 4. 🚀 Submit a Pull Request with a short summary of changes.
 
 ---
